@@ -98,10 +98,6 @@ int main()
     }
     for (int i = 0; i < vector.size() - 1; ++i)
     {
-        if (vector[i + 1] < vector[i])
-        {
-            vector[i +1] = vector[i];
-        }
     }
     std::cout << " Ordered array" << std::endl;
     for (int i = 0; i < vector.size(); ++i)
