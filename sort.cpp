@@ -19,6 +19,7 @@ std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
 
 int main()
 {
+    // 1
     std::cout << " Enter the size of the array " << std::endl;
     int n = 0;
     std::cin >> n;
@@ -47,5 +48,57 @@ int main()
             std::cout << v[i] << " ";
         }
         std::cout << std::endl;
+    // 2
+    std::cout << " Enter the size of the array one " << std::endl;
+    int size_array1 = 0;
+    std::cin >> size_array1;
+    std::vector<int> v1 = generate_random_vector<int> (size_array1, -50, 50);
+    for (int i = 0; i < v1.size() - 1; ++i)
+    {
+        for (int j = 0; j < v1.size() - i - 1; ++j)
+        {
+            if (v1[j] > v1[j + 1])
+            {
+                int temp = v1[j];
+                v1[j] = v1[j + 1];
+                v1[j + 1] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < v1.size(); ++i)
+    {
+        std::cout << v1[i] << " ";
+    }
+    std::cout << std::endl;
+    std::cout << std::endl;std::cout << " Enter the size of the array two " << std::endl;
+    int size_array2 = 0;
+    std::cin >> size_array2;
+    std::vector<int> v2 = generate_random_vector<int> (size_array2, -50, 50);
+    for (int i = 0; i < v2.size() - 1; ++i)
+    {
+        for (int j = 0; j < v2.size() - i - 1; ++j)
+        {
+            if (v2[j] > v2[j + 1])
+            {
+                int temp = v2[j];
+                v2[j] = v2[j + 1];
+                v2[j + 1] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < v2.size(); ++i)
+    {
+        std::cout << v2[i] << " ";
+    }
+    std::cout << std::endl;
+    std::vector<int>  vector= {};
+    for (int i = 0; i < v1.size() + v2.size(); ++i)
+    {
+    }
+    std::cout << " Ordered array" << std::endl;
+    for (int i = 0; i < v1.size() + v2.size(); ++i)
+    {
+        std::cout << vector[i] << " ";
+    }
     return 0;
 }
