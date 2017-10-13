@@ -70,7 +70,7 @@ int main()
         std::cout << v1[i] << " ";
     }
     std::cout << std::endl;
-    std::cout << std::endl;std::cout << " Enter the size of the array two " << std::endl;
+    std::cout << " Enter the size of the array two " << std::endl;
     int size_array2 = 0;
     std::cin >> size_array2;
     std::vector<int> v2 = generate_random_vector<int> (size_array2, -50, 50);
