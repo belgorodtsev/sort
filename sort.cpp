@@ -91,13 +91,23 @@ int main()
         std::cout << v2[i] << " ";
     }
     std::cout << std::endl;
-    std::vector<int>  vector = {v1};
+    std::vector<int>  vector = { v1 };
     for (int i = 0; i < v1.size(); ++i)
     {
         vector.push_back(v2[i]);
     }
+    int temp = vector[0];
     for (int i = 0; i < vector.size() - 1; ++i)
     {
+        for (int j = 0; j < vector.size() - i - 1; ++j)
+        {
+            if (vector[j] > vector[j + 1])
+            {
+                int temp = vector[j];
+                vector[j] = vector[j + 1];
+                vector[j + 1] = temp;
+            }
+        }
     }
     std::cout << " Ordered array" << std::endl;
     for (int i = 0; i < vector.size(); ++i)
