@@ -29,7 +29,6 @@ int main()
         std::cout << v[i] << " ";
     }
     std::cout << std::endl;
-    std::cout << " Ordered array" << std::endl;
     int temp = 0;
     for (int i = 0; i < v.size() - 1; ++i)
     {
